@@ -1,16 +1,12 @@
-CC = gcc
+CC = clang++ -std=c++11 -Wall -Werror
 
 all: compile clean run
 
-compile: *.c
-	$(CC) -fprofile-arcs -ftest-coverage -g main.c veb.c -lm -o veb
+compile: *.cc
+	$(CC) -fprofile-arcs -ftest-coverage -g main.cc veb.cc -lm -o veb
 
 valgrind: compile clean
 	valgrind --tool=memcheck --leak-check=yes -v ./veb
-
-test: test.c veb.c
-	$(CC) -fprofile-arcs -ftest-coverage -g test.c veb.c -lm -o test
-	./test
 
 coverage: veb.gcda
 	gcov veb.gcda
