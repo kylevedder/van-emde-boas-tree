@@ -1,4 +1,4 @@
-van emde boas tree [![Build Status](https://travis-ci.org/diogomg/van-emde-boas-tree.svg?branch=master)](https://travis-ci.org/diogomg/van-emde-boas-tree) [![Coverage Status](https://coveralls.io/repos/diogomg/van-emde-boas-tree/badge.png?branch=master)](https://coveralls.io/r/diogomg/van-emde-boas-tree?branch=master)
+van emde boas tree
 ==================
 
 A fast priority queue/tree/sort struct in a particular case. The vEB tree supports operations in O(loglog u) time when its keys are in the range 0 to u.
