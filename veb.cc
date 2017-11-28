@@ -1,5 +1,7 @@
 #include "veb.h"
 
+namespace veb_queue {
+
 int high(int x, int u) { return (int)(x / (int)sqrt(u)); }
 
 int low(int x, int u) { return (x % (int)sqrt(u)); }
@@ -202,3 +204,5 @@ void vEB_tree_shutdown(vEB *V) {
   if (NULL != V->cluster) free(V->cluster);
   free(V);
 }
+
+}  // namespace veb_queue

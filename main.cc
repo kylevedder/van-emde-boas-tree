@@ -1,5 +1,11 @@
 #include "veb.h"
 
+using veb_queue::vEB;
+using veb_queue::vEB_tree_delete;
+using veb_queue::vEB_tree_elements;
+using veb_queue::vEB_tree_insert;
+using veb_queue::vEB_tree_shutdown;
+
 int main() {
   int u = 4;
   vEB *V = NULL;

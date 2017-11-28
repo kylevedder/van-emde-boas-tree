@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+namespace veb_queue {
+
 typedef struct vEB{
     int u;
     int min, max;
@@ -32,3 +34,5 @@ void vEB_tree_print(vEB *V);
 void vEB_tree_print_number(vEB *V);
 
 void vEB_tree_shutdown(vEB *V);
+
+}  // namespace veb_queue
