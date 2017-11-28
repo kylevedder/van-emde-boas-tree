@@ -8,11 +8,11 @@ compile: *.cc
 valgrind: compile clean
 	valgrind --tool=memcheck --leak-check=yes -v ./veb
 
-coverage: veb.gcda
-	gcov veb.gcda
+coverage: veb.gcno
+	gcov veb.gcno
 
 run:
 	./veb
 
-clean: *.o
-	rm *.o *.gc*
+clean: *.gc*
+	rm *.gc*
