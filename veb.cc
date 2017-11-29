@@ -74,7 +74,7 @@ vEB *vEB_tree_delete(vEB *V, int x, int u) {
       V->contMin--;
       V->contMax--;
     } else {
-      free(V);
+      delete V;
       return nullptr;
     }
   } else if (V->u == 2) {
