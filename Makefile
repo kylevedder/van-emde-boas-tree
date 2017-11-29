@@ -3,9 +3,9 @@ CC = clang++ -std=c++11 -Wall -Werror
 all: compile run
 
 compile: *.cc
-	$(CC) -O3 -g main.cc veb.cc -lm -o veb
+	$(CC) main.cc veb.cc veb_queue.cc -g -o veb
 
-valgrind: compile clean
+valgrind: compile
 	valgrind --tool=memcheck --leak-check=yes -v ./veb
 
 run:
